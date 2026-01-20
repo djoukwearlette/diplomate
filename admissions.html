@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Le Diplomate - Admissions">
+    <title>Le Diplomate - Admissions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header scrolled">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <div class="logo-circle">
+                        <span>D</span>
+                    </div>
+                    <span class="logo-text" style="color: var(--primary-purple);">Le Diplomate</span>
+                </div>
+                <ul class="nav-links" style="color: var(--text-dark);">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                    <li><a href="#">Programme</a></li>
+                    <li><a href="admissions.html" class="active">Admissions</a></li>
+                    <li><a href="campus.html">Campus</a></li>
+                    <li><a href="#">Staff</a></li>
+                    <li><a href="actualites.html">Actualités</a></li>
+                    <li><a href="contact.html">Contacts</a></li>
+                </ul>
+                <a href="admissions.html" class="btn-yellow">S'inscrire maintenant</a>
+                <div class="hamburger">
+                    <span style="background: var(--primary-purple);"></span>
+                    <span style="background: var(--primary-purple);"></span>
+                    <span style="background: var(--primary-purple);"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-bg">
+            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1600" alt="Classroom">
+        </div>
+        <div class="page-header-overlay"></div>
+        <div class="page-header-content">
+            <h1>Admissions</h1>
+            <p class="breadcrumb"><a href="index.html">Accueil</a> / Admissions</p>
+        </div>
+    </section>
+
+    <!-- Fees Section -->
+    <section class="fees-section">
+        <div class="container">
+            <h2 class="fees-title">Frais d'inscription et de <span>Scolarité</span></h2>
+
+            <table class="fees-table">
+                <thead>
+                    <tr>
+                        <th>Classes</th>
+                        <th>Inscription</th>
+                        <th>Premiere tranche à l’inscription au plus tard le 31 aout 2025</th>
+                        <th>Deuxieme tranche payable au plus tard le 09 octobre 2025</th>
+                        <th>Troisième tranche payable au plus tard le 20 novembre 2025</th>
+                        <th>TOTAL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="section-name">Section maternelle</td>
+                        <td class="highlight-cell">20.000 FCFA</td>
+                        <td><strong>50.000 FCFA</strong></td>
+                        <td>30.000 FCFA</td>
+                        <td>20.00 FCFA</td>
+                        <td><strong>120.000 FCFA</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="section-name">SIL - CM2</td>
+                        <td class="highlight-cell">20.000 FCFA</td>
+                        <td><strong>50.000 FCFA</strong></td>
+                        <td>25.000 FCFA</td>
+                        <td>15.000 FCFA</td>
+                        <td><strong>110.000 FCFA</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="section-name">Prise en charge section Maternelle de 13h à 16h</td>
+                        <td class="highlight-cell"><strong>20.000 FCFA</strong> <br> Gouters, repas quotidiens sont à la
+                            charge des parents</td>
+                        <td><strong>20.000 FCFA</strong></td>
+                        <td>20.000 FCFA</td>
+                        <td>10.000 FCFA</td>
+                        <td><strong>60.000 FCFA</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Admission Form Section -->
+    <section class="admission-form-section">
+        <div class="container">
+            <h2 class="form-title">Formulaire <span>d'admission</span></h2>
+            <p class="form-subtitle">Remplissez le formulaire ci-dessous pour initier la procédure d'admission de votre
+                enfant au sein de notre établissement.</p>
+
+            <form class="admission-form">
+                <!-- Informations sur l'enfant -->
+                <div class="form-section">
+                    <h3 class="form-section-title">Informations sur l'enfant</h3>
+                    <div class="form-row two-col">
+                        <div class="form-group">
+                            <label>Nom complet son surnom(s)*</label>
+                            <input type="text" placeholder="Nom complet">
+                        </div>
+                        <div class="form-group">
+                            <label>Niveau d'inscription</label>
+                            <select>
+                                <option>Toddler</option>
+                                <option>Maternelle</option>
+                                <option>Primaire</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Genre</label>
+                            <input type="text" placeholder="Masculin">
+                        </div>
+                        <div class="form-group">
+                            <label>Naissance</label>
+                            <input type="text" placeholder="Nuwa">
+                        </div>
+                        <div class="form-group">
+                            <label>Date de Naissance*</label>
+                            <input type="text" placeholder="Dijital STEM Pen">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Genre</label>
+                            <select>
+                                <option>Féminin</option>
+                                <option>Masculin</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Mois de naissance</label>
+                            <select>
+                                <option>Le 5 Novembre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Nationalité</label>
+                            <select>
+                                <option>Jo...</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Informations du parent principal -->
+                <div class="form-section">
+                    <h3 class="form-section-title">Informations du parent principal</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Nom du parent/tuteur</label>
+                            <select>
+                                <option>Votre...</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Mode</label>
+                            <input type="text" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label>Prénom*</label>
+                            <input type="text" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Téléphone</label>
+                            <input type="text" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label>Numéro de téléphone</label>
+                            <input type="text" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label></label>
+                            <input type="text" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-row two-col">
+                        <div class="form-group">
+                            <label>Adresse e-mail*</label>
+                            <input type="email" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label></label>
+                            <input type="text" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea placeholder="Plus de mots c'est du génie 😅"></textarea>
+                    </div>
+                </div>
+
+                <!-- Pièces à joindre -->
+                <div class="form-section">
+                    <h3 class="form-section-title">Pièces à joindre</h3>
+                    <div class="upload-section">
+                        <p class="upload-title">Acte de naissance</p>
+                        <div class="upload-grid">
+                            <button type="button" class="upload-btn"><i class="fas fa-upload"></i> Upload PDF
+                                file</button>
+                        </div>
+                    </div>
+                    <div class="upload-section">
+                        <p class="upload-title">Bulletin semestriel de l'année antérieur</p>
+                        <div class="upload-grid">
+                            <button type="button" class="upload-btn"><i class="fas fa-upload"></i> Upload PDF
+                                file</button>
+                            <button type="button" class="upload-btn"><i class="fas fa-upload"></i> Upload PDF
+                                file</button>
+                            <button type="button" class="upload-btn"><i class="fas fa-upload"></i> Upload PDF
+                                file</button>
+                        </div>
+                    </div>
+                    <div class="upload-section">
+                        <p class="upload-title">Bulletin trimestriel de l'année antérieur</p>
+                        <div class="upload-grid">
+                            <button type="button" class="upload-btn"><i class="fas fa-upload"></i> Upload PDF
+                                file</button>
+                            <button type="button" class="upload-btn"><i class="fas fa-upload"></i> Upload PDF
+                                file</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-submit">
+                    <button type="submit" class="submit-btn">Soumettre la demande</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-circle light">
+                            <span>D</span>
+                        </div>
+                        <span class="logo-text">Le Diplomate</span>
+                    </div>
+                    <p class="tagline">Enseigner avec exigence, accueillir avec bienveillance</p>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +237 696 13 01 06</p>
+                        <p><i class="fas fa-phone"></i> +237 678 12 61 20</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Dibamba, Missolé II (PK 32)</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Naviguer</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="admissions.html">Admission</a></li>
+                        <li><a href="#">Staff</a></li>
+                        <li><a href="campus.html">Campus</a></li>
+                        <li><a href="actualites.html">Actualités</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Programmes</h4>
+                    <ul>
+                        <li><a href="#">Programme Maternelle</a></li>
+                        <li><a href="#">Programme Primaire</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Suivez nous</h4>
+                    <p>pour avoir nos actualités en temps réel</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>Copyright ©Le Diplomate | All Right Reserved</p>
+                <p><a href="#">Terms & Conditions / Privacy & Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
