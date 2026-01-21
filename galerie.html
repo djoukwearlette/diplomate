@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Le Diplomate - Galerie Photos">
+    <title>Le Diplomate - Galerie Photos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header scrolled">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="public/logo/logo en couleur.png" alt="Le Diplomate" class="logo-img">
+                </div>
+                <ul class="nav-links" style="color: var(--text-dark);">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="campus.html">Campus</a></li>
+                    <li><a href="actualites.html">Actualités</a></li>
+                    <li><a href="contact.html">Contacts</a></li>
+                </ul>
+                <a href="admissions.html" class="btn-yellow">S'inscrire maintenant</a>
+                <div class="hamburger">
+                    <span style="background: var(--primary-purple);"></span>
+                    <span style="background: var(--primary-purple);"></span>
+                    <span style="background: var(--primary-purple);"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-bg">
+            <img src="public/images/image principale de la page campus.png" alt="Galerie Photos">
+        </div>
+        <div class="page-header-overlay"></div>
+        <div class="page-header-content">
+            <h1>Notre Galerie</h1>
+            <p class="breadcrumb"><a href="index.html">Accueil</a> / Galerie</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-filters">
+                <button class="filter-btn active" onclick="filterGallery('all', this)">Tous</button>
+                <button class="filter-btn" onclick="filterGallery('campus', this)">Campus</button>
+                <button class="filter-btn" onclick="filterGallery('events', this)">Événements</button>
+                <button class="filter-btn" onclick="filterGallery('life', this)">Vie Scolaire</button>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Campus -->
+                <div class="gallery-item campus">
+                    <img src="public/images/salle de classe.png" alt="Salle de classe">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item campus">
+                    <img src="public/images/bibliothèque.png" alt="Bibliothèque">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item campus">
+                    <img src="public/images/piscine.png" alt="Piscine">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item campus">
+                    <img src="public/images/terrain de football.png" alt="Terrain de football">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item campus">
+                    <img src="public/images/aires de jeu.png" alt="Aires de jeu">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item campus">
+                    <img src="public/images/salle informatique.png" alt="Salle informatique">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <!-- Events -->
+                <div class="gallery-item events">
+                    <img src="public/images/actualité 01 fete de fin d'année.png" alt="Fête de fin d'année">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item events">
+                    <img src="public/images/actualité 02 fête nationnal de l'unité.png" alt="Fête de l'unité">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item events">
+                    <img src="public/images/actualité 03 fête du travail.png" alt="Fête du travail">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item events">
+                    <img src="public/images/actualité 04 fête de la jeunesse.png" alt="Fête de la Jeunesse">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+
+                <!-- Life -->
+                <div class="gallery-item life">
+                    <img src="public/images/service de transport.png" alt="Transport scolaire">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item life">
+                    <img src="public/images/mot de la présidence.png" alt="Vie scolaire">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item life">
+                    <img src="public/images/sanitaire.png" alt="Installations">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img src="" alt="" class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="public/logo/logo.png" alt="Le Diplomate" class="logo-img">
+                    </div>
+                    <p class="tagline">Enseigner avec exigence, accueillir avec bienveillance</p>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +237 696 13 01 06</p>
+                        <p><i class="fas fa-phone"></i> +237 678 12 61 20</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Dibamba, Missolé II (PK 32)</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Naviguer</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="admissions.html">Admission</a></li>
+                        <li><a href="galerie.html">Galerie</a></li>
+                        <li><a href="campus.html">Campus</a></li>
+                        <li><a href="actualites.html">Actualités</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Programmes</h4>
+                    <ul>
+                        <li><a href="#">Programme Maternelle</a></li>
+                        <li><a href="#">Programme Primaire</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Suivez nous</h4>
+                    <p>pour avoir nos actualités en temps réel</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>Copyright ©Le Diplomate | All Right Reserved</p>
+                <p><a href="#">Terms & Conditions / Privacy & Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function filterGallery(category, btnElement) {
+            const items = document.querySelectorAll('.gallery-item');
+            const btns = document.querySelectorAll('.filter-btn');
+
+            // Update buttons
+            btns.forEach(btn => btn.classList.remove('active'));
+            if (btnElement) {
+                btnElement.classList.add('active');
+            } else {
+                // Find button by category if called from script
+                const targetBtn = Array.from(btns).find(btn =>
+                    btn.getAttribute('onclick').includes(`'${category}'`)
+                );
+                if (targetBtn) targetBtn.classList.add('active');
+            }
+
+            // Filter items
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Handle URL parameters on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const filter = urlParams.get('filter');
+            if (filter) {
+                filterGallery(filter);
+            }
+        });
+
+        // Lightbox logic
+        const items = document.querySelectorAll('.gallery-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+                const img = item.querySelector('img');
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+        }
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                closeLightbox();
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

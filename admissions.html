@@ -20,17 +20,13 @@
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
-                    <img src="public/logo/logo.png" alt="Le Diplomate" class="logo-img"
-                        style="filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(246deg) brightness(104%) contrast(97%);">
-                    <span class="logo-text" style="color: var(--primary-purple);">Le Diplomate</span>
+                    <img src="public/logo/logo en couleur.png" alt="Le Diplomate" class="logo-img">
                 </div>
                 <ul class="nav-links" style="color: var(--text-dark);">
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="apropos.html">À propos</a></li>
-                    <li><a href="#">Programme</a></li>
                     <li><a href="admissions.html" class="active">Admissions</a></li>
                     <li><a href="campus.html">Campus</a></li>
-                    <li><a href="#">Staff</a></li>
                     <li><a href="actualites.html">Actualités</a></li>
                     <li><a href="contact.html">Contacts</a></li>
                 </ul>
@@ -75,7 +71,10 @@
                 <tbody>
                     <tr>
                         <td class="section-name">Section maternelle</td>
-                        <td class="highlight-cell">20.000 FCFA</td>
+                        <td class="highlight-cell">
+                            <strong>20.000 FCFA</strong><br>
+                            <small>+ 1 rame de papier A4 (80g) et 1 boîte de craie exigibles</small>
+                        </td>
                         <td><strong>50.000 FCFA</strong></td>
                         <td>30.000 FCFA</td>
                         <td>20.00 FCFA</td>
@@ -83,7 +82,10 @@
                     </tr>
                     <tr>
                         <td class="section-name">SIL - CM2</td>
-                        <td class="highlight-cell">20.000 FCFA</td>
+                        <td class="highlight-cell">
+                            <strong>20.000 FCFA</strong><br>
+                            <small>+ 1 rame de papier A4 (80g) et 1 boîte de craie exigibles</small>
+                        </td>
                         <td><strong>50.000 FCFA</strong></td>
                         <td>25.000 FCFA</td>
                         <td>15.000 FCFA</td>
@@ -113,53 +115,61 @@
             <form class="admission-form">
                 <!-- Informations sur l'enfant -->
                 <div class="form-section">
-                    <h3 class="form-section-title">Informations sur l'enfant</h3>
+                    <h3 class="form-section-title">Information sur L’enfant</h3>
                     <div class="form-row two-col">
                         <div class="form-group">
-                            <label>Nom complet son surnom(s)*</label>
-                            <input type="text" placeholder="Nom complet">
-                        </div>
-                        <div class="form-group">
-                            <label>Niveau d'inscription</label>
+                            <label>Selectionné le cycle souhaité</label>
                             <select>
-                                <option>Toddler</option>
                                 <option>Maternelle</option>
                                 <option>Primaire</option>
                             </select>
                         </div>
+                        <div class="form-group">
+                            <label>Numero d’Inscription</label>
+                            <input type="text" placeholder="123456">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Noms</label>
+                            <input type="text" placeholder="Nagendra">
+                        </div>
+                        <div class="form-group">
+                            <label>Prénoms</label>
+                            <input type="text" placeholder="Yadav">
+                        </div>
+                        <div class="form-group">
+                            <label>Photo de l’élève</label>
+                            <div class="upload-capsule">
+                                <input type="file" id="photo-eleve" hidden>
+                                <label for="photo-eleve">Upload PDF/Doc</label>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Genre</label>
-                            <input type="text" placeholder="Masculin">
-                        </div>
-                        <div class="form-group">
-                            <label>Naissance</label>
-                            <input type="text" placeholder="Nuwa">
-                        </div>
-                        <div class="form-group">
-                            <label>Date de Naissance*</label>
-                            <input type="text" placeholder="Dijital STEM Pen">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Genre</label>
+                            <label>Sexe</label>
                             <select>
-                                <option>Féminin</option>
                                 <option>Masculin</option>
+                                <option>Féminin</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Mois de naissance</label>
-                            <select>
-                                <option>Le 5 Novembre</option>
-                            </select>
+                            <label>Date de naissance</label>
+                            <input type="text" placeholder="JJ/MM/AAAA">
                         </div>
                         <div class="form-group">
-                            <label>Nationalité</label>
+                            <label>Classe souhaitée</label>
                             <select>
-                                <option>Jo...</option>
+                                <option>SIL</option>
+                                <option>CP</option>
+                                <option>CE1</option>
+                                <option>CE2</option>
+                                <option>CM1</option>
+                                <option>CM2</option>
                             </select>
                         </div>
                     </div>
@@ -167,81 +177,85 @@
 
                 <!-- Informations du parent principal -->
                 <div class="form-section">
-                    <h3 class="form-section-title">Informations du parent principal</h3>
+                    <h3 class="form-section-title">Information du parent principal</h3>
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Nom du parent/tuteur</label>
+                            <label>Relation avec l’élève</label>
                             <select>
-                                <option>Votre...</option>
+                                <option>Father</option>
+                                <option>Mother</option>
+                                <option>Guardian</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Mode</label>
-                            <input type="text" placeholder="">
+                            <label>Noms</label>
+                            <input type="text" placeholder="Ashok">
                         </div>
                         <div class="form-group">
-                            <label>Prénom*</label>
-                            <input type="text" placeholder="">
+                            <label>Prénoms</label>
+                            <input type="text" placeholder="Babu">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Téléphone</label>
-                            <input type="text" placeholder="">
+                            <label>Adresse mail</label>
+                            <input type="email" placeholder="Example@gmail.com">
                         </div>
                         <div class="form-group">
-                            <label>Numéro de téléphone</label>
-                            <input type="text" placeholder="">
+                            <label>Numero de téléphone</label>
+                            <input type="text" placeholder="+91 123 456 7890">
                         </div>
                         <div class="form-group">
-                            <label></label>
-                            <input type="text" placeholder="">
+                            <label>Profession</label>
+                            <input type="text" placeholder="B.Tech">
                         </div>
                     </div>
-                    <div class="form-row two-col">
-                        <div class="form-group">
-                            <label>Adresse e-mail*</label>
-                            <input type="email" placeholder="">
-                        </div>
-                        <div class="form-group">
-                            <label></label>
-                            <input type="text" placeholder="">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Message</label>
-                        <textarea placeholder="Plus de mots c'est du génie 😅"></textarea>
+                    <div class="form-group full-width">
+                        <label>Adresse du parent</label>
+                        <textarea placeholder="Please type your address here..."></textarea>
                     </div>
                 </div>
 
-                <!-- Pièces à joindre -->
+                <!-- Pièces à fournir -->
                 <div class="form-section">
-                    <h3 class="form-section-title">Pièces à joindre</h3>
-                    <div class="upload-section">
-                        <p class="upload-title">Acte de naissance</p>
-                        <div class="upload-grid">
-                            <button type="button" class="upload-btn"><i class="fas fa-upload"></i> Upload PDF
-                                file</button>
+                    <h3 class="form-section-title">Piece à fournir</h3>
+                    <div class="upload-grid-row">
+                        <div class="form-group">
+                            <label>Acte de naissance</label>
+                            <div class="upload-capsule">
+                                <input type="file" id="acte-naissance" hidden>
+                                <label for="acte-naissance">Upload PDF/Doc</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Bulletin trimestre 1 année dernière</label>
+                            <div class="upload-capsule">
+                                <input type="file" id="bulletin-t1" hidden>
+                                <label for="bulletin-t1">Upload PDF/Doc</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Bulletin trimestre 2 année dernière</label>
+                            <div class="upload-capsule">
+                                <input type="file" id="bulletin-t2" hidden>
+                                <label for="bulletin-t2">Upload PDF/Doc</label>
+                            </div>
                         </div>
                     </div>
-                    <div class="upload-section">
-                        <p class="upload-title">Bulletin semestriel de l'année antérieur</p>
-                        <div class="upload-grid">
-                            <button type="button" class="upload-btn"><i class="fas fa-upload"></i> Upload PDF
-                                file</button>
-                            <button type="button" class="upload-btn"><i class="fas fa-upload"></i> Upload PDF
-                                file</button>
-                            <button type="button" class="upload-btn"><i class="fas fa-upload"></i> Upload PDF
-                                file</button>
+                    <div class="upload-grid-row centered">
+                        <div class="form-group">
+                            <label>Bulletin trimestre 3 année dernière</label>
+                            <div class="upload-capsule">
+                                <input type="file" id="bulletin-t3" hidden>
+                                <label for="bulletin-t3">Upload PDF/Doc</label>
+                            </div>
                         </div>
-                    </div>
-                    <div class="upload-section">
-                        <p class="upload-title">Bulletin trimestriel de l'année antérieur</p>
-                        <div class="upload-grid">
-                            <button type="button" class="upload-btn"><i class="fas fa-upload"></i> Upload PDF
-                                file</button>
-                            <button type="button" class="upload-btn"><i class="fas fa-upload"></i> Upload PDF
-                                file</button>
+                        <div class="form-group">
+                            <label>Carnet de vaccination</label>
+                            <div class="upload-capsule">
+                                <input type="file" id="carnet-vac" hidden>
+                                <label for="carnet-vac">Upload PDF/Doc</label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -260,7 +274,6 @@
                 <div class="footer-brand">
                     <div class="logo">
                         <img src="public/logo/logo.png" alt="Le Diplomate" class="logo-img">
-                        <span class="logo-text">Le Diplomate</span>
                     </div>
                     <p class="tagline">Enseigner avec exigence, accueillir avec bienveillance</p>
                     <div class="contact-info">
@@ -274,7 +287,7 @@
                     <ul>
                         <li><a href="index.html">Accueil</a></li>
                         <li><a href="admissions.html">Admission</a></li>
-                        <li><a href="#">Staff</a></li>
+                        <li><a href="galerie.html">Galerie</a></li>
                         <li><a href="campus.html">Campus</a></li>
                         <li><a href="actualites.html">Actualités</a></li>
                     </ul>
@@ -282,8 +295,8 @@
                 <div class="footer-links">
                     <h4>Programmes</h4>
                     <ul>
-                        <li><a href="#">Programme Maternelle</a></li>
-                        <li><a href="#">Programme Primaire</a></li>
+                        <li><a href="#">Maternelle</a></li>
+                        <li><a href="#">Primaire</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
