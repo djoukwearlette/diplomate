@@ -106,7 +106,7 @@ function initHeroSlider() {
 
     let currentSlide = 0;
     let autoSlideInterval;
-    const slideInterval = 6000; // 6 seconds
+    const slideIntervalTime = 6000; // 6 seconds
 
     // Go to specific slide
     function goToSlide(index) {
@@ -135,63 +135,58 @@ function initHeroSlider() {
         goToSlide(currentSlide - 1);
     }
 
-    // Start auto-slide
-    function startAutoSlide() {
-        autoSlideInterval = setInterval(nextSlide, slideInterval);
-    }
-
-    // Stop auto-slide
-    function stopAutoSlide() {
+    // Reset auto-slide timer safely
+    function resetAutoSlide() {
         clearInterval(autoSlideInterval);
+        autoSlideInterval = setInterval(nextSlide, slideIntervalTime);
     }
 
     // Event listeners for dots
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
-            stopAutoSlide();
             goToSlide(index);
-            startAutoSlide();
+            resetAutoSlide(); // Reset timer on interaction
         });
     });
 
     // Event listeners for arrows
     if (prevBtn) {
         prevBtn.addEventListener('click', () => {
-            stopAutoSlide();
             prevSlide();
-            startAutoSlide();
+            resetAutoSlide(); // Reset timer on interaction
         });
     }
 
     if (nextBtn) {
         nextBtn.addEventListener('click', () => {
-            stopAutoSlide();
             nextSlide();
-            startAutoSlide();
+            resetAutoSlide(); // Reset timer on interaction
         });
     }
 
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft') {
-            stopAutoSlide();
             prevSlide();
-            startAutoSlide();
+            resetAutoSlide();
         } else if (e.key === 'ArrowRight') {
-            stopAutoSlide();
             nextSlide();
-            startAutoSlide();
+            resetAutoSlide();
         }
     });
 
     // Pause on hover
     if (sliderContainer) {
-        sliderContainer.addEventListener('mouseenter', stopAutoSlide);
-        sliderContainer.addEventListener('mouseleave', startAutoSlide);
+        sliderContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoSlideInterval);
+        });
+        sliderContainer.addEventListener('mouseleave', () => {
+            resetAutoSlide();
+        });
     }
 
-    // Start auto-slide
-    startAutoSlide();
+    // Start auto-slide initially
+    resetAutoSlide();
 }
 
 // Add animate-in class styles dynamically

@@ -20,9 +20,8 @@
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
-                    <div class="logo-circle">
-                        <span>D</span>
-                    </div>
+                    <img src="public/logo/logo.png" alt="Le Diplomate" class="logo-img"
+                        style="filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(246deg) brightness(104%) contrast(97%);">
                     <span class="logo-text" style="color: var(--primary-purple);">Le Diplomate</span>
                 </div>
                 <ul class="nav-links" style="color: var(--text-dark);">
@@ -48,7 +47,7 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="page-header-bg">
-            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1600" alt="Campus">
+            <img src="public/images/image_principal_de_la_page_a propos.jpg" alt="Campus">
         </div>
         <div class="page-header-overlay"></div>
         <div class="page-header-content">
@@ -69,8 +68,7 @@
                     <p class="signature">Mme TIEFANG</p>
                 </div>
                 <div class="director-image">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500"
-                        alt="Mme TIEFANG - Directrice">
+                    <img src="public/images/mot de la présidence.png" alt="Mme TIEFANG - Directrice">
                 </div>
             </div>
         </div>
@@ -81,11 +79,11 @@
         <div class="container">
             <h2 class="section-title">Découvrir Le Diplomate en Vidéo</h2>
             <div class="video-container">
-                <!-- Using a placeholder video but styled to look ready for content -->
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ScMzIvxBSi4?controls=0"
-                    title="Présentation Le Diplomate"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                <!-- Local video -->
+                <video width="100%" controls>
+                    <source src="public/images/vidéo de la page a propos.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéos.
+                </video>
             </div>
         </div>
     </section>
@@ -196,9 +194,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="logo">
-                        <div class="logo-circle light">
-                            <span>D</span>
-                        </div>
+                        <img src="public/logo/logo.png" alt="Le Diplomate" class="logo-img">
                         <span class="logo-text">Le Diplomate</span>
                     </div>
                     <p class="tagline">Enseigner avec exigence, accueillir avec bienveillance</p>

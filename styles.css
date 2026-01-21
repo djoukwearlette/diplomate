@@ -2,8 +2,8 @@
 :root {
     --primary-purple: #5D4595;
     --primary-purple-light: #7a5fb3;
-    --primary-yellow: #F5A623;
-    --primary-yellow-light: #FFD93D;
+    --primary-yellow: #EFCF2D;
+    --primary-yellow-light: #EFCF2D;
     --text-dark: #333333;
     --text-light: #666666;
     --text-white: #FFFFFF;
@@ -121,12 +121,30 @@ img {
     align-items: center;
     justify-content: space-between;
     padding: 15px 0;
+    gap: 20px;
+    /* Add gap for better spacing */
+    flex-wrap: nowrap;
+    /* Prevent wrapping */
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-shrink: 0;
+    /* Prevent logo from shrinking */
+}
+
+/* Logo image styling */
+.logo-img {
+    height: 40px;
+    width: auto;
+    transition: var(--transition);
+}
+
+/* Invert logo color when scrolled */
+.header.scrolled .logo-img {
+    filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(246deg) brightness(104%) contrast(97%);
 }
 
 .logo-circle {
@@ -157,14 +175,20 @@ img {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 18px;
+    /* Reduced from 25px */
+    flex-wrap: nowrap;
+    /* Prevent wrapping */
 }
 
 .nav-links a {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    /* Slightly smaller */
     font-weight: 500;
     color: var(--text-white);
     position: relative;
+    white-space: nowrap;
+    /* Prevent text wrapping */
 }
 
 .nav-links a:hover,
@@ -201,6 +225,18 @@ img {
     background: var(--text-white);
     border-radius: 3px;
     transition: var(--transition);
+}
+
+.header.scrolled .hamburger span {
+    background: var(--text-dark);
+}
+
+/* Navbar button spacing */
+.navbar .btn-yellow {
+    flex-shrink: 0;
+    padding: 10px 22px;
+    /* Slightly smaller */
+    font-size: 0.85rem;
 }
 
 /* ===== Hero Slider Section ===== */
@@ -266,9 +302,8 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background:
-        radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.3) 100%),
-        linear-gradient(to bottom, rgba(93, 69, 149, 0.4) 0%, rgba(93, 69, 149, 0.6) 100%);
+    /* Subtle gradient from bottom to allow text readability */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%);
     z-index: -1;
 }
 
@@ -287,50 +322,85 @@ img {
 }
 
 .slide-content h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    line-height: 1.2;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    font-size: 4rem;
+    /* Larger font size */
+    font-weight: 800;
+    margin-bottom: 25px;
+    line-height: 1.1;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+    /* Stronger shadow for readability */
+    letter-spacing: -1px;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUpFade 0.8s ease forwards 0.3s;
 }
 
 .slide-content p {
-    font-size: 1.1rem;
-    margin-bottom: 35px;
-    opacity: 0.95;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-    line-height: 1.7;
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    opacity: 0;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(20px);
+    animation: slideUpFade 0.8s ease forwards 0.5s;
+}
+
+.slide-content .btn-yellow {
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUpFade 0.8s ease forwards 0.7s;
+    box-shadow: 0 4px 15px rgba(245, 166, 35, 0.4);
+}
+
+@keyframes slideUpFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Slider Navigation Dots */
+/* Glassmorphism Slider Controls */
 .slider-nav {
     position: absolute;
-    bottom: 100px;
+    bottom: 50px;
+    /* Moved down slightly */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 12px;
+    gap: 15px;
+    /* More space */
     z-index: 10;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .slider-dot {
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.4);
-    border: 2px solid rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    /* Removed border */
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .slider-dot:hover {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.9);
+    transform: scale(1.2);
 }
 
 .slider-dot.active {
     background: var(--primary-yellow);
-    border-color: var(--primary-yellow);
-    transform: scale(1.2);
+    transform: scale(1.4);
+    box-shadow: 0 0 10px rgba(245, 166, 35, 0.6);
 }
 
 /* Slider Arrows */
@@ -338,33 +408,39 @@ img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.15);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    width: 60px;
+    /* Larger */
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    /* Glass */
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     color: var(--text-white);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     cursor: pointer;
     transition: all 0.3s ease;
     z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .slider-arrow:hover {
     background: var(--primary-yellow);
     border-color: var(--primary-yellow);
     color: var(--text-dark);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 20px rgba(245, 166, 35, 0.4);
 }
 
 .slider-arrow.prev {
-    left: 30px;
+    left: 40px;
 }
 
 .slider-arrow.next {
-    right: 30px;
+    right: 40px;
 }
 
 .scroll-indicator {
