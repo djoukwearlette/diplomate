@@ -189,9 +189,6 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="programs-cta">
-                        <Link to="#" className="btn-purple">Voir plus</Link>
-                    </div>
                 </div>
             </section>
 

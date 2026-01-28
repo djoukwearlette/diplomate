@@ -22,8 +22,16 @@ const About = () => {
                     <div className="director-content">
                         <div className="director-text">
                             <h2>Le mot de la Directrice</h2>
-                            <p className="quote">"Éduquer, c'est semer des graines de réussite. Au Diplomate, nous offrons bien plus que des savoirs : nous formons des esprits éveillés, des cœurs bienveillants et des citoyens engagés. Parce que chaque enfant mérite d'écrire son propre succès."</p>
-                            <p className="signature">Mme TIEFANG</p>
+                            <p className="quote">"Bienvenue au Groupe Scolaire Bilingue LE DIPLOMATE.
+
+                                Autorisé en mai 2024, notre ambition est de devenir un établissement de référence en Sanaga Maritime.
+
+                                Nous offrons un environnement d'apprentissage sûr et stimulant, alliant excellence académique et riche programme parascolaire pour l'épanouissement de chaque élève.
+
+                                Notre campus moderne est conçu pour répondre à cette ambition.
+
+                                Je vous invite à nous rencontrer et à découvrir notre école pour envisager ensemble le parcours éducatif de votre enfant"</p>
+                            <p className="signature">Marie Pascal Dongmo Épouse TIEFAN</p>
                         </div>
                         <div className="director-image">
                             <img src="/images/mot-presidence.png" alt="Mme TIEFANG - Directrice" />
